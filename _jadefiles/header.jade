@@ -1,0 +1,17 @@
+mixin nav-list()
+  ul
+      li: a(href="#illustrations" ) illustrations
+      li: a(href="#illustrations" ) about
+      li: a(href="#illustrations" ) contact
+
+.mobile-site-nav
+  +nav-list()
+header
+  .header-wrap
+    h1.logo Ka Ching
+    h6.menu-toggler menu
+    nav.site-nav
+      +nav-list()
+
+        
+  

@@ -1,0 +1,132 @@
+.site-wrap {
+  header{
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: pink;
+  }
+
+  .header-wrap{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .logo{
+    @include hide-text() ;
+    background:
+      url(/assets/img/logo.svg)
+      no-repeat;
+    margin: 10px 0;
+    padding: 0;
+    max-height: 80px;
+    max-width: 80px;
+  }
+
+  .site-nav{
+    ul{
+      list-style: none;
+      display: flex;
+      //padding: 10px;
+      z-index: 9999;
+    }
+    li{
+      padding: 10px;
+      a{
+        text-transform: uppercase;
+        font-weight: 700;
+        color: rgba(0, 0, 0, 1);
+        &:hover{
+          border-bottom: 2px solid $black;
+        }
+      }
+    }
+  }
+
+  .mobile-site-nav{
+    //display: none;
+    position: absolute;
+    width: 100%;
+    background: pink;
+    padding: 60px 0 0 0;
+    transform: translateY(-100%);
+    @include transition(all 0.3s ease-in-out);
+    ul{
+      list-style: none;
+      margin: 0;
+      padding: 0 10px 0 0;
+    }
+    li{
+      text-align: right;
+      a{
+        text-transform: uppercase;
+        font-weight: 700;
+        color: rgba(0, 0, 0, 1);
+        &:hover{
+          border-bottom: 2px solid $black;
+        }
+      }
+    }
+  }
+
+  .menu-toggler{
+    display: none;
+    font-size: 16px;
+    font-weight: 700px;
+    font-family: $font-paras;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: $black;
+    margin: 10px;
+    padding: 0;
+    cursor: pointer;
+    position: relative;
+
+    &::before{
+    content: ' ';
+    background:
+    url(/assets/img/arrow-down.svg)
+    no-repeat;
+    display: block;
+    width: 0.7em;
+    height: 0.7em;
+    position: absolute;
+    top: 35%;
+    right:3.9em;
+    @include transition(all 0.3s ease-in-out);
+    }
+    &.is-open::before{
+      transform: rotate(180deg);
+    }
+  }
+}
+
+@media (max-width: 768px){
+.site-wrap{
+  .header-wrap{
+      justify-content:space-between;
+    }
+      .site-nav{
+      display: none;
+    }
+
+    .menu-toggler{
+      display: block;
+
+    }
+
+    .logo{
+      margin: 10px;
+      max-height: 40px;
+      max-width: 40px;
+    }
+  }
+  .mobile-site-nav.is-open{
+    display: block;
+    transform: translateY(0%);
+  }
+}
+
+.test{height:2000px;}
