@@ -36,3 +36,4 @@ _site/
 *.css.map
 
 # End of https://www.gitignore.io/api/windows,jekyll,sass
+*.config

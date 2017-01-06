@@ -1,3 +1,33 @@
 .site-wrap{
   display: flex;
+
+  @media (max-width: 775px) {
+    display: block;
+  }
+}
+
+.sections-wrap{
+  display: flex;
+  flex-flow: column wrap;
+  padding-top: 50px;
+  flex: 1;
+
+  section{
+    margin-bottom: 50px;
+  }
+
+  section.about{
+    display: flex;
+    flex-flow:column wrap;
+    //justify-content:flex-start;
+    & h3{
+      text-align: left;
+      color: $black;
+      background: pink;
+    }
+    & p{
+      margin: 0 auto;
+      background: pink;
+    }
+  }
 }

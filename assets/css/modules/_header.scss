@@ -4,7 +4,8 @@
     position: fixed;
     top: 0;
     left: 0;
-    background: pink;
+    background: rgba(250,250,250,.8);
+    z-index: 9999;
   }
 
   .header-wrap{
@@ -49,8 +50,9 @@
     //display: none;
     position: absolute;
     width: 100%;
-    background: pink;
+    background: rgba(250,250,250,.8);
     padding: 60px 0 0 0;
+    z-index: 9999;
     transform: translateY(-100%);
     @include transition(all 0.3s ease-in-out);
     ul{
@@ -125,8 +127,7 @@
   }
   .mobile-site-nav.is-open{
     display: block;
+    position: fixed;
     transform: translateY(0%);
   }
 }
-
-.test{height:2000px;}

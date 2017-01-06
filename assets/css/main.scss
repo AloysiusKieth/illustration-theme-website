@@ -3,6 +3,7 @@
 //  mixin libs, fonts, vars, normalize
 @import "tools/normalize";
 @import "tools/bourbon/bourbon";
+@import "tools/_jquery.galereya";
 @import "tools/fonts";
 @import "tools/vars";
 
@@ -10,4 +11,6 @@
 @import "base/base";
 
 //  modules
+@import "modules/site-wrap";
 @import "modules/header";
+@import "modules/gallery";
